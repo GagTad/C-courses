@@ -1,0 +1,20 @@
+#include <iostream>
+
+int cache [10]{0};
+int Factorial(int x)
+{    
+    if(x<1) {return 1;}
+    if(cache[x]){return cache [x];}
+    cache [x]= x*Factorial(x-1);
+    return cache[x];
+}
+int main()
+{
+  int x;
+  std::cout<<" insert nuber : ";
+  std::cin>>x;
+  std::cout<<" The factorial of "<<x<< " is "<<Factorial(x)<<std::endl;;
+  //std::cout<<Factorial(8)<<std::endl;
+  //std::cout<<Factorial(6)<<std::endl;
+   return 0;
+}
